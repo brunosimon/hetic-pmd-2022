@@ -33,7 +33,7 @@
                     <h1>Développement web</h1>
                     <h3>Cours 04</h3>
                     <ul>
-                        <li>site : <a target="_blank" href="http://bruno-simon.com/hetic/mba-2016/">http://bruno-simon.com/hetic/mba-2016/</a></li>
+                        <li>site : <a target="_blank" href="http://bruno-simon.com/hetic/pmd-2019/">http://bruno-simon.com/hetic/pmd-2019/</a></li>
                         <li>contact : <a target="_blank" href="mailto:bruno.simon@hetic.net">bruno.simon@hetic.net</a></li>
                     </ul>
                 </section>
@@ -48,30 +48,47 @@
                 </section>
 
                 <section>
-                    <h2>Ressources</h2>
-                    <p><a target="_blank" href="resources.zip">Télécharger ressources</a></p>
+                    <h2>Maquettes</h2>
+                </section>
+
+                <section>
+                    <p>En situation réelle, le format des maquette dépend du logiciel utilisé (Sketch, Photoshop, Figma)</p>
+                    <p>Dans le cadre de l'exercice et dans un souci de compatibilité, vous allez travailler avec une image et un psd</p>
+                    <p>4 images vous sont aussi fournies dans le dossier <span class="u">images/</span></p>
+                    <p><a target="_blank" href="maquettes.zip">Télécharger les maquettes</a></p>
                 </section>
 
                 <section>
                     <h2>Organisation</h2>
+                </section>
+
+                <section>
                     <p>Il est important d'organiser les fichiers dès le début</p>
-                    <p>Créez un dossier et appelez le du nom du projet <span class="highlight">integration-1</span></p>
+                    <p>Créez un dossier et appelez le du nom du projet <span class="hl">integration-1</span></p>
                     <p>Créez les dossiers et fichiers comme tel</p>
-                    <pre><code contenteditable="" data-trim="" class="html">
+                    <div class="code-steps" data-type="html" data-trim>
+                        <pre contenteditable><code>
 ├── index.html
-└── src
+└── sources
     └── images
         └── ...
     └── css
         └── style.css
-                    </code></pre>
+                        </code></pre>
+                    </div>
                 </section>
 
                 <section>
-                    <h2>Organisation</h2>
-                    <p>Ouvrez les fichiers <span class="highlight">index.html</span> et <span class="highlight">style.css</span> dans Sublime Text</p>
-                    <p>Ajoutez ce code de base dans <span class="highlight">index.html</span></p>
-                    <pre><code contenteditable="" data-trim="" class="html">
+                    <p>Nous avons nommé la page d'accueil <span class="u">index.html</span> pas seulement par convention</p>
+                    <p>Lorsqu'on accède à un site, si aucun fichier n'est spécifié, le serveur va automatiquement tenter de charger le fichier <span class="u">index.html</span></p>
+                    <p><span class="hl">https://monsite.com</span> => <span class="hl">https://monsite.com/index.html</span></p>
+                </section>
+
+                <section>
+                    <p>Ouvrez les fichiers <span class="hl">index.html</span> et <span class="hl">style.css</span> dans votre éditeur</p>
+                    <p>Ajoutez ce code de base dans <span class="hl">index.html</span></p>
+                    <div class="code-steps" data-type="html" data-trim>
+                        <pre contenteditable><code>
 &lt;!doctype html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -82,11 +99,11 @@
         
     &lt;/body&gt;
 &lt;/html&gt;
-                    </code></pre>
+                        </code></pre>
+                    </div>
                 </section>
 
                 <section>
-                    <h2>Organisation</h2>
                     <p>Il existe deux façons d'intégrer une page HTML/CSS</p>
                     <ul>
                         <li>
@@ -102,6 +119,9 @@
 
                 <section>
                     <h2>HTML</h2>
+                </section>
+
+                <section>
                     <p>Pour garder un HTML propre</p>
                     <ul>
                         <li>Bien indenter</li>
@@ -113,174 +133,182 @@
                 </section>
 
                 <section>
-                    <h2>HTML</h2>
-                    <p>Exemple</p>
-                    <pre><code contenteditable="" data-trim="" class="html">
-
-&lt;body&gt;
-
-    <!-- HEADER -->
-    &lt;div class="header"&gt;
-        &lt;h1&gt;Mon site&lt;/h1&gt;
-        <img src="logo.jpg" alt="Logo de ma boutique">
-    &lt;/div&gt;
-
-    <!-- DESCRIPTION -->
-    &lt;div class="description"&gt;
-        &lt;p class="intro"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-        &lt;p&gt;Quisquam delectus voluptatum ut placeat unde suscipit voluptates itaque, saepe, eaque soluta. Aspernatur numquam hic fugiat eaque fuga nemo, harum quisquam reprehenderit!&lt;/p&gt;
-        &lt;a href="page-2.html"&gt;Liens page 2&lt;/a&gt;
-    &lt;/div&gt;
-
-&lt;/body&gt;
-                    </code></pre>
+                    <h2>CSS</h2>
                 </section>
 
                 <section>
-                    <h2>CSS</h2>
                     <p>Pour garder un CSS propre</p>
                     <ul>
                         <li>Bien séparer les différentes parties de la page</li>
                         <li>Commenter</li>
                         <li>Identifier des propriétés CSS qui s'appliquent sur toute la page</li>
                         <li>Ne pas laisser trainer de code dont on ne connait pas l'utilité</li>
-                        <li>Choisir entre du CSS <span class="highlight">inline</span> (moins lisible, plus condensé) et du CSS <span class="highlight">block</span> (plus lisible, plus de lignes)</li>
+                        <li>Choisir entre du CSS <span class="hl">inline</span> et <span class="hl">block</span></li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>CSS</h2>
-                    <p>Exemple inline</p>
-                    <pre><code contenteditable="" data-trim="" class="css">
-/* GLOBAL */
-body {font-family:Helvetica,Arial;color:#cccccc;font-size:14px;}
-a {text-decoration:underline;color:#ff7800;}
+                    <p>Exemple de CSS inline</p>
+                    <div class="code-steps" data-type="css" data-trim>
+                        <pre contenteditable><code>
+/* Global */
+body { font-family: Helvetica,Arial; color: #cccccc; font-size: 14px; }
+a { text-decoration: underline; color: #ff7800; }
 
-/* HEADER */
-header {height:100px;padding-top:40px;text-align:center;background:#e7e8ed;}
-header h1 {font-size:22px;font-weight:bold;}
+/* Header */
+header { height: 100px; padding-top:40px; text-align:center; background: #e7e8ed; }
+header h1 { font-size: 22px; font-weight: bold; }
 
-/* DESCRIPTION */
-.description {padding:100px;text-align:justify;}
-.description p {font-style:italic;}
-.description p.intro {font-weight:bold;color:#000;}
-                    </code></pre>
+/* Description */
+.description { padding: 100px; text-align: justify; }
+.description p { font-style: italic; }
+.description p.intro { font-weight: bold; color: #000000; }
+                        </code></pre>
+                    </div>
+                    <p>Les sélecteurs sont faciles à comparer et le code est déjà compressé, mais il faut scroller horizontalement et il est difficile de s'y retrouver dans les propriétés</p>
                 </section>
 
                 <section>
-                    <h2>CSS</h2>
-                    <p>Même exemple en block</p>
-                    <pre><code contenteditable="" data-trim="" class="css">
-/* GLOBAL */
-body {
-    font-family:Helvetica,Arial;
-    color:#cccccc;
-    font-size:14px;
+                    <p>Exemple de CSS block</p>
+                    <div class="code-steps" data-type="css" data-trim>
+                        <pre contenteditable><code>
+/* Global */
+body
+{
+    font-family: Helvetica,Arial;
+    color: #cccccc;
+    font-size: 14px;
 }
-a {
-    text-decoration:underline;
-    color:#ff7800;
-}
-
-/* HEADER */
-header {
-    height:100px;
-    padding-top:40px;
-    text-align:center;
-    background:#e7e8ed;
-}
-header h1 {
-    font-size:22px;
-    font-weight:bold;
+a
+{
+    text-decoration: underline;
+    color: #ff7800;
 }
 
-/* DESCRIPTION */
-.description {
-    padding:100px;
-    text-align:justify;
+/* Header */
+header
+{
+    height: 100px;
+    padding-top: 40px;
+    text-align: center;
+    background: #e7e8ed;
 }
-.description p {
-    font-style:italic;
+header h1
+{
+    font-size: 22px;
+    font-weight: bold;
 }
-.description p.intro {
-    font-weight:bold;
-    color:#000;
+
+/* Description */
+.description
+{
+    padding: 100px;
+    text-align: justify;
 }
-                    </code></pre>
+.description p
+{
+    font-style: italic;
+}
+.description p.intro
+{
+    font-weight: bold;
+    color: #000000;
+}
+                        </code></pre>
+                    </div>
+                    <p>Beaucoup plus lisible, mais il faut beaucoup scroller et on peut difficilement comparer les sélecteurs</p>
                 </section>
 
                 <section>
                     <h2>ASTUCES</h2>
                     <p>Pour qu'une image de fond prenne toute la largeur et la hauteur sans perdre son homothétie</p>
-                    <pre><code contenteditable data-trim class="css">
-.element {
-    background:url(../img/image.jpg);
-    background-size:cover;
+                    <div class="code-steps" data-type="css" data-trim>
+                        <pre contenteditable><code>
+.element
+{
+    background: url(../img/image.jpg);
+    background-size: cover;
 }
-                    </code></pre>
+                        </code></pre>
+                    </div>
                 </section>
 
                 <section>
                     <h2>ASTUCES</h2>
                     <p>Pour centrer un élément de type block horizontalement</p>
-                    <pre><code contenteditable data-trim class="css">
-.element {
-    margin-top:0;
-    margin-right:auto;
-    margin-bottom:0;
-    margin-left:auto;
+                    <div class="code-steps" data-type="css" data-trim>
+                        <pre contenteditable><code>
+.element
+{
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
 }
-                    </code></pre>
+                        </code></pre>
+                    </div>
                     <p>Pareil que</p>
-                    <pre><code contenteditable data-trim class="css">
-.element {
-    margin:0 auto 0 auto;
+                    <div class="code-steps" data-type="css" data-trim>
+                        <pre contenteditable><code>
+.element
+{
+    margin: 0 auto 0 auto;
 }
-                    </code></pre>
+                        </code></pre>
+                    </div>
                 </section>
 
                 <section>
                     <h2>ASTUCES</h2>
-                    <p>Pour centrer un élément au milieu d'un conteneur</p>
-                    <pre><code contenteditable data-trim class="css">
-.conteneur {
-    position:relative;
-    width:100%;
-    height:500px;
+                    <p>Pour centrer un élément au milieu d'un container</p>
+                    <div class="code-steps" data-type="css" data-trim>
+                        <pre contenteditable><code>
+.container
+{
+    position: relative;
+    width: 100%;
+    height: 500px;
 }
 
-.conteneur .element {
-    position:absolute;
-    top:50%;
-    left:50%;
-    width:100px;
-    height:100px;
-    margin:-50px 0 0 -50px;
+.container .element
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
 }
-                    </code></pre>
+                        </code></pre>
+                    </div>
                 </section>
 
                 <section>
                     <h2>ASTUCES</h2>
                     <p>Pour qu'un élément prennent 1/3 à gauche et un autre élément prenne 2/3 à droite</p>
-                    <pre><code contenteditable data-trim class="css">
-.conteneur {
-    width:100%;
-    height:500px;
+                    <div class="code-steps" data-type="css" data-trim>
+                        <pre contenteditable><code>
+.container
+{
+    width: 100%;
+    height: 500px;
 }
 
-.conteneur .left {
-    width:33%;
-    height:100%;
-    float:left;
+.container .left
+{
+    width: 33%;
+    height: 100%;
+    float: left;
 }
 
-.conteneur .right {
-    width:67%;
-    height:100%;
-    float:right;
+.container .right
+{
+    width: 67%;
+    height: 100%;
+    float: right;
 }
-                    </code></pre>
+                        </code></pre>
+                    </div>
                 </section>
 
                 <section>
