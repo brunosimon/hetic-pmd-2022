@@ -1,0 +1,9 @@
+h1
+{
+    color: blue;
+}
+
+h1.toto:hover
+{
+    color: red;
+}
