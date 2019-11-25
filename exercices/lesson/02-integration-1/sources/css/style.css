@@ -1,0 +1,26 @@
+body
+{
+    background: #edeff1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container
+{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.header
+{
+    position: relative;
+    height: 200px;
+    background: #ffffff;
+}
+
+.header .title
+{
+    position: absolute;
+    top: 65px;
+    left: 40px;
+    font-size: 50px;
+}

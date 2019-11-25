@@ -1,0 +1,129 @@
+body
+{
+    background: #edeff1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    line-height: 1.25em;
+}
+
+.container
+{
+    width: 840px;
+    margin: 0 auto;
+}
+
+/*
+ * Header
+ */
+.header
+{
+    position: relative;
+    height: 200px;
+    margin-bottom: 40px;
+    background: #ffffff;
+}
+
+.header a
+{
+    text-decoration: none;
+}
+
+.header .title
+{
+    position: absolute;
+    top: 65px;
+    left: 40px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.header .navigation
+{
+    position: absolute;
+    top: 88px;
+    right: 40px;
+}
+
+.header .navigation .link
+{
+    padding: 15px;
+}
+
+/*
+ * Articles
+ */
+.articles
+{
+    margin-bottom: 100px;
+    font-size: 0;
+}
+
+.articles .article
+{
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 390px;
+    margin-bottom: 50px;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.articles .article:nth-child(odd)
+{
+    margin-right: 40px;
+}
+
+.articles .article .thumbnail
+{
+    display: block;
+}
+
+.articles .article .content
+{
+    padding: 40px;
+}
+
+.articles .article .title
+{
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.articles .article .read-more
+{
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    padding: 14px 20px;
+    background: #fc534c;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*
+ * Footer
+ */
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 40px;
+    background: #232729;
+    color: #ffffff;
+}
+
+/*
+ * Responsive
+ */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
+{
+    body
+    {
+        background: red;
+    }
+}
