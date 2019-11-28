@@ -10,17 +10,113 @@ body
     margin: 0 auto;
 }
 
+/************************************
+ * Header
+ ***********************************/
 .header
 {
     position: relative;
     height: 200px;
+    margin-bottom: 40px;
     background: #ffffff;
 }
 
-.header .title
+.header h1
 {
     position: absolute;
     top: 65px;
     left: 40px;
     font-size: 50px;
+    font-weight: 600;
+}
+
+.header .title a
+{
+    text-decoration: none;
+}
+
+.header .navigation
+{
+    position: absolute;
+    top: 88px;
+    right: 20px;
+}
+
+.header .navigation .link
+{
+    text-decoration: none;
+    padding: 20px;
+}
+
+/************************************
+ * Articles
+ ***********************************/
+.articles
+{
+    margin-bottom: 80px;
+    font-size: 0;
+}
+
+.articles .article
+{
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 390px;
+    margin-bottom: 50px;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.articles .article:nth-child(odd)
+{
+    margin-right: 40px;
+}
+
+.articles .article .content
+{
+    padding: 40px;
+    line-height: 1.25em;
+}
+
+.articles .article .title
+{
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.articles .article .read-more
+{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #fc534c;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/************************************
+ * Footer
+ ***********************************/
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 40px;
+    background: #232729;
+    color: #ffffff;
+}
+
+
+
+
+@media (max-width: 1000px)
+{
+    body
+    {
+        background: red;
+    }
 }
