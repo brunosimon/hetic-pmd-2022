@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Cours 09 - Javascript</title>
+        <meta name="description" content="">
+        <meta name="author" content="Bruno Simon">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../src/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../src/reveal.js/css/theme/orange.css" id="theme">
+        <!-- <link rel="stylesheet" href="../src/reveal.js/lib/css/highlight/railscasts.css"> -->
+        <link rel="stylesheet" href="../src/reveal.js/lib/css/highlight/github.css">
+        <link rel="stylesheet" href="../src/custom/style.css">
+        <script>
+            document.write( '<link rel="stylesheet" href="../src/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        <!--[if lt IE 9]>
+            <script src="../src/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Code steps start -->
+        <link rel="stylesheet" href="../src/code-steps/prism-tomorrow.css">
+        <link rel="stylesheet" href="../src/code-steps/style.css">
+        <!-- Code steps end -->
+    </head>
+    <body>
+        <div class="reveal">
+            <div id="pagination"></div>
+            <div class="slides">
+
+                <!-- INTRO -->
+                <section>
+                    <h1>Développement web</h1>
+                    <h3>Cours 09</h3>
+                    <ul>
+                        <li>site : <a target="_blank" href="http://bruno-simon.com/hetic/pmd-2019/">http://bruno-simon.com/hetic/pmd-2019/</a></li>
+                        <li>contact : <a target="_blank" href="mailto:bruno.simon@hetic.net">bruno.simon@hetic.net</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Javascript</h1>
+                </section>
+
+                <section>
+                    <h2>Qu'est-ce que c'est ?</h2>
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="fragment">Language de programmation principalement utilisé dans les pages web</li>
+                        <li class="fragment">Peut être utilisé dans d'autres domaines</li>
+                        <li class="fragment">Permet de d'écouter des événements et de modifier la page</li>
+                        <li class="fragment">Intégré à tous les navigateurs</li>
+                        <li class="fragment">Peut être désactivé</li>
+                        <li class="fragment">Diminutif : <span class="hl">JS</span></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><span class="hl">Java</span> is to <span class="hl">Javascript</span> what <span class="hl">car</span> is to <span class="hl">carpet</span></p>
+                </section>
+
+                <section>
+                    <h2>Comment l'utiliser</h2>
+                </section>
+
+                <section>
+                    <p>Il existe plusieurs façon d'ajouter du javascript à une page</p>
+                    <p>La plus simple étant de rajouter des balises <span class="hl">&lt;script&gt;&lt;/script&gt;</span> avant la fermeture du <span class="hl">&lt;body&gt;</span></p>
+                    <p>Il suffit ensuite d'écrire</p>
+                    <pre><code contenteditable class="html">
+&lt;script&gt;
+    alert('Hello');
+&lt;/script&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Comment ça marche</h2>
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="fragment">Il se lance dès qu'il est chargé</li>
+                        <li class="fragment">Si on recharge la page, il se lance à nouveau</li>
+                        <li class="fragment">Les espaces et retours à la ligne n'ont pas d'importance</li>
+                        <li class="fragment">Fonctionne avec des variables et des fonctions</li>
+                        <li class="fragment">Une mauvaise écriture du code peut empêcher l'intégralité du JS de fonctionner</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Les variables</h2>
+                </section>
+
+                <section>
+                    <p>
+                        Javascript fonctionne avec des variables.
+                        <br />Elles permettent de sauvegarder des données
+                    </p>
+                    <p>Ajoutez le code suivant entre les balises <span class="hl">&lt;script&gt;&lt;/script&gt;</span></p>
+                    <pre><code contenteditable class="javascript">
+var toto = 'tata';
+alert(toto);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <pre><code contenteditable class="javascript">
+var toto = 'tata';
+alert(toto);
+                    </code></pre>
+                    <ul>
+                        <li><span class="hl">var</span> indique que l'on créé une variable</li>
+                        <li>La variable <span class="hl">toto</span> contient la chaîne de caractères <span class="u">tata</span></li>
+                        <li>Chaque instruction se termine par <span class="hl">;</span></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li><span class="hl">alert()</span> est une fonction permettant d'afficher le contenu dans une popup</li>
+                        <li>Elle est déjà intégrée au JS</li>
+                        <li>Une fonction s'appelle en rajoutant les <span class="hl">()</span></li>
+                        <li>Ce qui se trouve entre ces <span class="hl">()</span> s'appellent les <span class="hl">paramètres</span></li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+alert('Salut');
+alert('ça');
+alert('va');
+alert('?');
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>La technique du <span class="hl">alert()</span> n'est pas très pratique, nous allons utiliser la console</p>
+                    <p>Tous les navigateurs récents intègrent une console</p>
+                    <p>Elle a été conçue pour les développeurs et permet d'afficher le contenu des variables et d'écrire du JS directement dans la page</p>
+                </section>
+
+                <section>
+                    <p>Pour la lancer :</p>
+                    <ul>
+                        <li>
+                            Sur Chrome Mac : <span class="hl">CMD + ALT + I</span>
+                            <br>Sur Chrome PC : <span class="hl">F12</span>
+                        </li>
+                        <li>Aller dans l'onglet <span class="hl">console</span><br><img width="140" src="src/img/screen-chrome-console-1.png" alt=""></li>
+                        <li>
+                            Pour afficher des données dans la console
+                            <pre><code contenteditable class="javascript">
+console.log('Salut');
+console.log('ça');
+console.log('va');
+console.log('?');
+                            </code></pre>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Nomenclature</h2>
+                </section>
+
+                <section>
+                    <p>La nomenclature est l'art de nommer une variable</p>
+                    <p>Sont autorisés :</p>
+                    <ul>
+                        <li>Les lettres de A à Z en minuscule et majuscule</li>
+                        <li>Les chiffres (sauf en premier caractère)</li>
+                        <li>Les underscores <span class="hl">_</span> (ou tirets du bas)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Bonnes pratiques</p>
+                    <ul>
+                        <li>Nom clair et compréhensible</li>
+                        <li>Pas trop long</li>
+                        <li>En anglais</li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+var user_name = 'Ben';
+var user_age = 25;
+var click_count = 10;
+var image_width = 250;
+                    </code></pre>
+
+                </section>
+
+                <section>
+                    <h2>Types de variables</h2>
+                </section>
+
+                <section>
+                    <p>Il existe plusieurs types de variables :</p>
+                    <ul>
+                        <li>String</li>
+                        <li>Number</li>
+                        <li>Boolean</li>
+                        <li>Array</li>
+                        <li>Object</li>
+                        <li>Function</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>String</h3>
+                    <ul>
+                        <li>Une <span class="hl">String</span> est une chaîne de caractères</li>
+                        <li>On peut la délimiter par des <span class="hl">'</span> ou des <span class="hl">"</span></li>
+                        <li>On peut les concaténer (rassembler) avec des <span class="hl">+</span></li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+var a = 'Bonjour';
+var b = 'tout le monde';
+var c = a + b;
+
+console.log(c);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Number</h3>
+                    <ul>
+                        <li>Un <span class="hl">Number</span> est un simple nombre pouvant être un entier ou un nombre à virgule</li>
+                        <li>On peut les additionner, multiplier, diviser, ...</li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+var a = 2;
+var b = 3.5;
+var c = a + b;
+
+console.log(c);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Boolean</h3>
+                    <ul>
+                        <li>Un <span class="hl">Boolean</span> est une valeur vraie ou fausse</li>
+                        <li>On utilise <span class="hl">true</span> et <span class="hl">false</span> sans <span class="hl">'</span> car ce n'est pas une String</li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+var a = true;
+var b = false;
+
+console.log(a);
+console.log(b);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Array</h3>
+                    <ul>
+                        <li>Un <span class="hl">Array</span> est un tableau de données</li>
+                        <li>Il est délimité par <span class="hl">[</span> et <span class="hl">]</span></li>
+                        <li>Les valeurs sont séparées par des <span class="hl">,</span></li>
+                        <li>Ces valeurs peuvent être de n'importe quel type (String, Number, Boolean et même un autre tableau)</li>
+                        <li>On peut accéder à chacune de ces valeurs</li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+var a = ['hey',true,25,['a','b']];
+
+console.log(a);
+console.log(a[0]);
+console.log(a[1]);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Object</h3>
+                    <ul>
+                        <li>Un <span class="hl">Object</span> possède des propriétés qui peuvent contenir des données (???)</li>
+                        <li>Il est délimité par <span class="hl">{</span> et <span class="hl">}</span></li>
+                        <li>Chaque propriété est définie par un nom et une valeur séparés par <span class="hl">:</span></li>
+                        <li>Les propriétés sont séparées par des <span class="hl">,</span></li>
+                        <li>Si une propriété est une fonction, on appelle ça une méthode</li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+var a = { color : 'red', distance : 10 };
+
+console.log(a);
+console.log(a.color);
+console.log(a.distance);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Fonctions</h3>
+                    <ul>
+                        <li>Une fonction correspond à une série d'instructions</li>
+                        <li>La syntaxe pour créer une fonction est différente d'une variable</li>
+                        <li>Elle est déclarée avec <span class="hl">function</span> et les instructions sont entourées par <span class="hl">{</span> et <span class="hl">}</span></li>
+                        <li>Elle peut avoir des paramètres séparés par des <span class="hl">,</span></li>
+                        <li>Elle peut renvoyer un résultat avec <span class="hl">return</span></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Fonctions</h3>
+                    <pre><code contenteditable class="javascript">
+function addition(a,b)
+{
+    return a + b;
+}
+
+var c = addition(2,3);
+console.log(c);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Il est possible de changer la valeur de toutes les variables que nous venons de voir</p>
+                    <pre><code contenteditable class="javascript">
+var a = 'bonjour';
+console.log(a);
+
+a = 10;
+console.log(a);
+
+a = false;
+console.log(a);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Interval / Timeout</h2>
+                </section>
+
+                <section>
+                    <p>Parfois, on a besoin que javascript attende un peu avant d'éxecuter une instruction</p>
+                    <p>La méthode <span class="hl">setTimeout</span> permet de faire ça</p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Le premier paramètre est une fonction, elle ne sera pas déclenchée tout de suite</li>
+                        <li>Le deuxième paramètre est le temps à attendre avant de déclencher la fonction (en millisecondes)</li>
+                    </ul>
+                    <pre><code contenteditable class="javascript">
+setTimeout(function()
+{
+    console.log('Bonjour');
+},1000);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Parfois, on a besoin que javascript déclenche une instruction plusieurs fois à interval régulier</p>
+                    <p>La méthode <span class="hl">setInterval</span> permet de faire ça</p>
+                </section>
+
+                <section>
+                    <p>Les paramètres sont les mêmes que pour le setTimeout</p>
+                    <pre><code contenteditable class="javascript">
+setInterval(function()
+{
+    console.log('Bonjour');
+},1000);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>If / ELSE</h2>
+                </section>
+
+                <section>
+                    <p>En javascript, il est possible de tester une condition et de faire telle action si la condition est vraie et telle autre action si la condition est fausse</p>
+                    <p>Pour cela, on utilise <span class="hl">if</span> et <span class="hl">else</span> avec des accolades <span class="hl">{</span> <span class="hl">}</span></p>
+                </section>
+
+                <section>
+                    <p>Pour tester une égalité, il faut utiliser <span class="hl">==</span></p>
+                    <pre><code contenteditable class="javascript">
+var toto = 5;
+if(toto == 5)
+{
+    console.log('vrai !');
+}
+else
+{
+    console.log('faux');
+}
+
+                    </code></pre>
+                    <p>Si toto vaut 5, la console va afficher <span class="u">vrai !</span>, sinon elle va afficher <span class="u">faux !</span></p>
+                </section>
+
+                <section>
+                    <p>Pour tester une inégalité, il faut utiliser <span class="hl">!=</span></p>
+                    <pre><code contenteditable class="javascript">
+var toto = 6;
+if(toto != 5)
+{
+    console.log('coucou');
+}
+
+                    </code></pre>
+                    <p>Si toto est différent de 5, la console va afficher <span class="u">coucou</span></p>
+                </section>
+
+                <section>
+                    <p>Pour tester si une valeur est supérieure ou inférieure, il faut utiliser <span class="hl">></span> et <span class="hl"><</span></p>
+                    <pre><code contenteditable class="javascript">
+var toto = 6;
+if(toto > 5)
+{
+    console.log('coucou');
+}
+
+                    </code></pre>
+                    <p>Si toto est supérieur à 5, la console va afficher <span class="u">coucou</span></p>
+                </section>
+
+                <section>
+                    <p>On peut tester autre chose que des Numbers</p>
+                    <pre><code contenteditable class="javascript">
+if(toto == false)
+{
+    console.log('coucou 1');
+}
+
+if(toto == 'test')
+{
+    console.log('coucou 2');
+}
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>On peut comparer une variable à une autre</p>
+                    <pre><code contenteditable class="javascript">
+var toto = 5;
+var tata = 10;
+if(toto == tata)
+{
+    console.log('coucou');
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>À quoi ça sert</h2>
+                </section>
+
+                <section>
+                    <ul>
+                        <li class="fragment">Ajouter des interactions</li>
+                        <li class="fragment">Animer des éléments de la page</li>
+                        <li class="fragment">Créer un carousel</li>
+                        <li class="fragment">Valider un formulaire</li>
+                        <li class="fragment">Créer un tchat</li>
+                        <li class="fragment">Tag analytics</li>
+                        <li class="fragment">Créer des jeux</li>
+                        <li class="fragment">Hacker (?)</li>
+                        <li class="fragment">...</li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="../src/caniuse-embed.min.js"></script>
+        <script src="../src/reveal.js/lib/js/head.min.js"></script>
+        <script src="../src/reveal.js/js/reveal.js"></script>
+
+        <!-- Code steps start -->
+        <script src="../src/code-steps/prism.js" data-manual></script>
+        <!-- Code steps end -->
+
+        <script type="module" src="../src/custom/script-module.js"></script>
+    </body>
+</html>
